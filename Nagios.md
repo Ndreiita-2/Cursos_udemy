@@ -109,3 +109,5 @@ pager                           IDTELEGRAM
 ```
 sudo systemctl restart nagios
 ```
+
+## Archivo Sección 3.12
