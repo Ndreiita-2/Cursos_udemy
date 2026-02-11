@@ -6,16 +6,20 @@ Nagios es una herramienta de monitorización de código abierto que permite supe
 # Rutas importantes
 
 - /usr/local/nagios/etc
-    - cgi.cfg
-    - nagios.cfg
-    - resource.cfg (macros $USERx$)
-    - htpasswd.users
+    - cgi.cfg -> Archivo de configuración de la web
+    - nagios.cfg -> Arcivo de configuración motor de Nagios
+    - resource.cfg (macros $USERx$) -> Archivo definir macros de usuarios y contraseñas, especificar rutas de plugins
+    - htpasswd.users -> Contiene la información de los usuarios y su contraseña cifrada
 
 - /usr/local/nagios/etc/objects
-    - localhost.cfg
-    - commands.cfg
-    - contacts.cfg
-    - timeperiods.cfg
+    - localhost.cfg -> Archivo configuración del servidor de Nagios para automonitorizarse
+    - commands.cfg -> Permite definir los comandos al hacer checks
+    - contacts.cfg -> Definir y dar de alta contactos
+    - timeperiods.cfg -> Configura la información sobre los periodos de tiempo que queremos que se ejecuten los checks
+
+UDEMY SECCIÓN 3.11 PRÁCTICA
+
+> :q! -> Salir sin guardar
 
 # Comandos
 1. Editar configuración
@@ -38,6 +42,11 @@ sudo cp nagios.cfg nagios.cfg-NOMBRE
 ```
 sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/bin/nagios.cfg
 ```
+6. Hacer copia de seguridad
+```
+sudo cp nagios.cfg nagios.cfg.bck
+```
+
 ## Notificaciones a Telegram
 1. Buscamos BotFather
 ```
