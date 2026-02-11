@@ -1,9 +1,21 @@
 # Introducción Nagios
 **Qué és y para qué sirve**
+
+Nagios es una herramienta de monitorización de código abierto que permite supervisar sistemas, redes e infraestructuras de TI, alertando sobre problemas y fallos en tiempo real. 
+
 # Rutas importantes
 
-/usr/local/nagios/etc
-/usr/local/nagios/etc/objects
+- /usr/local/nagios/etc
+    - cgi.cfg
+    - nagios.cfg
+    - resource.cfg (macros $USERx$)
+    - htpasswd.users
+
+- /usr/local/nagios/etc/objects
+    - localhost.cfg
+    - commands.cfg
+    - contacts.cfg
+    - timeperiods.cfg
 
 # Comandos
 1. Editar configuración
