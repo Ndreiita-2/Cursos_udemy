@@ -1,7 +1,27 @@
 # Introducción Nagios
 **Qué és y para qué sirve**
 # Rutas importantes
+
+/usr/local/nagios/etc
+/usr/local/nagios/etc/objects
+
 # Comandos
+1. Editar comandos
+```
+sudo vim commands.cfg
+```
+3. Editar host
+```
+sudo vim localhost.cfg
+```
+5. Realizar copia
+```
+sudo cp nagios.cfg nagios.cfg-NOMBRE
+```
+4. Ver errores
+```
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/bin/nagios.cfg
+```
 ## Notificaciones a Telegram
 1. Buscamos BotFather
 ```
@@ -59,4 +79,8 @@ host_notifications_commands     notify-service-by-email,notify-service-by-telegr
 email                           GMAIL
 pager                           IDTELEGRAM
 }
+```
+9. Reiniciamos el servivio de Nagios
+```
+sudo systemctl restart nagios
 ```
