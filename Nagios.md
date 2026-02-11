@@ -6,7 +6,11 @@
 /usr/local/nagios/etc/objects
 
 # Comandos
-1. Editar comandos
+1. Editar configuración
+```
+sudo vim nagios.cfg
+```
+2. Editar comandos
 ```
 sudo vim commands.cfg
 ```
@@ -14,11 +18,11 @@ sudo vim commands.cfg
 ```
 sudo vim localhost.cfg
 ```
-5. Realizar copia
+4. Realizar copia
 ```
 sudo cp nagios.cfg nagios.cfg-NOMBRE
 ```
-4. Ver errores
+5. Ver errores
 ```
 sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/bin/nagios.cfg
 ```
