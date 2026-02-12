@@ -23,3 +23,7 @@ sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/bin/nagios.cfg
 ```
 sudo cp nagios.cfg nagios.cfg.bck
 ```
+7. Reiniciar servicios de Nagios
+```
+sudo systemctl restart nagios.service
+```
