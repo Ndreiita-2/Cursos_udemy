@@ -3,12 +3,16 @@
 
 Nagios es una herramienta de monitorización de código abierto que permite supervisar sistemas, redes e infraestructuras de TI, alertando sobre problemas y fallos en tiempo real. 
 
+Nagios viene con plugins ya instalados, pero la esencia es personalizarlo y poner lo que creamos necesarios.
+
+Los checks permiten saber a Nagios si los host y servicios funcionan correctamente.
+
 # Rutas importantes
 
 - /usr/local/nagios/etc
     - cgi.cfg -> Archivo de configuración de la web
     - nagios.cfg -> Arcivo de configuración motor de Nagios
-    - resource.cfg (macros $USERx$) -> Archivo definir macros de usuarios y contraseñas, especificar rutas de plugins
+    - resource.cfg (macros $ USERx $) -> Archivo definir macros de usuarios y contraseñas, especificar rutas de plugins
     - htpasswd.users -> Contiene la información de los usuarios y su contraseña cifrada
 
 - /usr/local/nagios/etc/objects
@@ -86,6 +90,23 @@ use_timezone=Europe/Spain
 > :wq -> para guardar y salir
 
 > sudo systemctl restart nagios.service -> Reiniciar el servicio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Notificaciones
