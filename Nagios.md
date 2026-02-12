@@ -110,4 +110,65 @@ pager                           IDTELEGRAM
 sudo systemctl restart nagios
 ```
 
-## Archivo Sección 3.12
+## Archivo nagios.cfg
+Se van a guardar los logs
+```
+# Ruta archivo de log
+
+log_file=/usr/local/nagios/var/nagios.log
+
+# Directorio con archivos de objetos cfg para monitorizar
+
+cfg_dir=/usr/local/nagios/etc/objects/RUTA
+
+#Archivos importantes configuración
+
+cfg_file=/usr/local/nagios/etc/objects/commands.cfg
+cfg_file=/usr/local/nagios/etc/objects/contacts.cfg
+cfg_file=/usr/local/nagios/etc/objects/timeperiods.cfg
+cfg_file=/usr/local/nagios/etc/objects/templates.cfg
+cfg_file=/usr/local/nagios/etc/objects/localhost.cfg
+
+# Archivo configuración de recursos
+
+resource_file=cfg_file=/usr/local/nagios/etc/resource.cfg
+
+# Status file
+
+status_file=cfg_file=/usr/local/nagios/var/status.dat
+
+# Intervalo de tiempo en escribir en status.dat
+
+status_update_interval=10
+
+# Usuario y grupo SO
+
+nagios_user=USUARIO
+nagios_group=GRUPO
+
+# usar syslog también con archivo de log
+
+use_syslog=1
+
+# Comandos externos por web a fichero
+
+check_external_commands=1
+
+#Checkeos pasivos
+
+accept_passive_service_checks=1
+accept_passive_host_checks=1
+
+# Evitar o escapar caracteres especiales
+
+illegal_object_name_chars=`~!$%^&*|'"<>?,()
+illegal_macro_output_chars=`~$&|'"<>
+
+# Formato fecha y hora
+
+date_format=euro
+use_timezone=Europe/Spain
+
+```
+
+< Para guardar y salir :wq enter
