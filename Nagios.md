@@ -171,4 +171,6 @@ use_timezone=Europe/Spain
 
 ```
 
-< Para guardar y salir :wq enter
+> :wq -> para guardar y salir
+
+> sudo systemctl restart nagios.service -> Reiniciar el servicio
