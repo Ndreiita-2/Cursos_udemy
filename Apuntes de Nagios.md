@@ -143,6 +143,13 @@ sudo vim NOMBREHOST
 }
 
 ```
+Queremos que lo que hay en la carpeta que hemos creado, sea procesado por Nagios:
+```
+sudo vim /usr/local/nagios/etc/nagios.cfg
+```
+```
+cfg_dir=/usr/local/nagios/etc/objects/CARPETACREADAHOST/NOMBREHOST1.CFG
+```
 > :wq -> para guardar y salir
 
 > sudo systemctl restart nagios.service -> Reiniciar el servicio
