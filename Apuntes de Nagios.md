@@ -27,6 +27,10 @@ Los checks permiten saber a Nagios si los host y servicios funcionan correctamen
 
 Los Host son los dispositivos que tienen IP y se conectan con Nagios para ser monitorizados.
 
+Las variables o macros ($) es lo que nos va a permitir dinámicamente invocar información. Podemos crear nosotros nuestras propias macros personalizadas (_).
+
+Los servicios son la representación de los recursos que queremos monitorizar
+
 # Rutas importantes
 
 - /usr/local/nagios/etc
@@ -40,6 +44,8 @@ Los Host son los dispositivos que tienen IP y se conectan con Nagios para ser mo
     - commands.cfg -> Permite definir los comandos al hacer checks
     - contacts.cfg -> Definir y dar de alta contactos
     - timeperiods.cfg -> Configura la información sobre los periodos de tiempo que queremos que se ejecuten los checks
+      
+- /usr/local/nagios/libexec -> Lista de plugins
 
 UDEMY SECCIÓN 3.11 PRÁCTICA
 
