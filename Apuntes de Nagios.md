@@ -5,10 +5,14 @@
 ![Foto de portada](NAGIOS/Portadaa.png)
 
 </div>
+
+# Índice
     
 - [Introducción Nagios](#introducción-nagios)
   
 - [Rutas importantes](#rutas-importantes)
+  
+- [Archivos importantes](#archivos-importantes)
 
 # Introducción Nagios
 **Qué és y para qué sirve**
@@ -38,7 +42,9 @@ UDEMY SECCIÓN 3.11 PRÁCTICA
 > :q! -> Salir sin guardar
 
 # Archivos importantes
+
 ## Archivo nagios.cfg
+
 Se van a guardar los logs
 ```
 # Ruta archivo de log
