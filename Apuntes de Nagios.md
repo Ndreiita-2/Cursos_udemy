@@ -2,6 +2,8 @@
     
 # **NAGIOS**
 
+![Foto de portada](NAGIOS/Portada.png)
+
 </div>
     
 - [Introducción Nagios](#introducción-nagios)
