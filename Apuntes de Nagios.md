@@ -25,6 +25,8 @@ Nagios viene con plugins ya instalados, pero la esencia es personalizarlo y pone
 
 Los checks permiten saber a Nagios si los host y servicios funcionan correctamente.
 
+Los Host son los dispositivos que tienen IP y se conectan con Nagios para ser monitorizados.
+
 # Rutas importantes
 
 - /usr/local/nagios/etc
