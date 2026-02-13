@@ -14,6 +14,8 @@
   
 - [Archivos importantes](#archivos-importantes)
 
+- [Notificaciones](#notificaciones)
+
 # Introducción Nagios
 **Qué és y para qué sirve**
 
