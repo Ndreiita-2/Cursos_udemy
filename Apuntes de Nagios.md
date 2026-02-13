@@ -109,6 +109,40 @@ use_timezone=Europe/Spain
 
 ```
 
+## Archivo de Hosts
+
+Dentro de la ruta /usr/local/nagios/etc/objects, creamos una carpeta donde vamos a meter los archivos con nuestros Host:
+
+```
+sudo mkdir NOMBRECARPETA
+```
+```
+cd NOMBRECARPETA
+```
+```
+sudo vim NOMBREHOST
+```
+```
+ define host {
+    parents                 SO
+    host_name               NOMBREDISPOSITIVO
+    address                 IP
+    check_command           check-host-alive
+    max_check_attempts      3
+    check_interval          5
+    retry_interval          1
+    check_period            24x7
+    #contacts                NOMBRECONTACTO
+    #contact_groups          GRUPOCONTACTO
+    notification_interval   120
+    notification_period     24x7
+    notifications_enabled   1
+    icon_image              IMAGENINTERFAZ
+    statusmap_image         IMAGENINTERFAZ
+    register                1
+}
+
+```
 > :wq -> para guardar y salir
 
 > sudo systemctl restart nagios.service -> Reiniciar el servicio
