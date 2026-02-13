@@ -2,7 +2,7 @@
     
 # **NAGIOS**
 
-![Foto de portada](NAGIOS/Portada.png)
+![Foto de portada](NAGIOS/Portadaa.png)
 
 </div>
     
