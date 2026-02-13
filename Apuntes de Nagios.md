@@ -150,6 +150,10 @@ sudo vim /usr/local/nagios/etc/nagios.cfg
 ```
 cfg_dir=/usr/local/nagios/etc/objects/CARPETACREADAHOST/NOMBREHOST1.CFG
 ```
+Reiniciamos el sistema de Nagios
+```
+sudo systemctl restart nagios.service
+```
 > :wq -> para guardar y salir
 
 > sudo systemctl restart nagios.service -> Reiniciar el servicio
