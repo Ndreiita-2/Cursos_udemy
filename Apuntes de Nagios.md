@@ -109,9 +109,9 @@ use_timezone=Europe/Spain
 
 ```
 
-## Archivo de Hosts
+## Archivo de Hosts y HostGroups
 
-Dentro de la ruta /usr/local/nagios/etc/objects, creamos una carpeta donde vamos a meter los archivos con nuestros Host:
+Dentro de la ruta /usr/local/nagios/etc/objects, creamos una carpeta donde vamos a meter los archivos con nuestros Host y Host groups:
 
 ```
 sudo mkdir NOMBRECARPETA
@@ -119,6 +119,9 @@ sudo mkdir NOMBRECARPETA
 ```
 cd NOMBRECARPETA
 ```
+
+Para crear el primer Host:
+
 ```
 sudo vim NOMBREHOST
 ```
@@ -143,6 +146,21 @@ sudo vim NOMBREHOST
 }
 
 ```
+
+Para crear el primer Host group:
+
+```
+sudo vim NOMBREGRUPOHOST
+```
+```
+define hostgroup {
+        hostgroup_name  NOMBREGRUPO
+        alias           NOMBRE
+        members         NOMBRESHOST
+}
+
+
+```
 Queremos que lo que hay en la carpeta que hemos creado, sea procesado por Nagios:
 ```
 sudo vim /usr/local/nagios/etc/nagios.cfg
@@ -154,6 +172,15 @@ Reiniciamos el sistema de Nagios
 ```
 sudo systemctl restart nagios.service
 ```
+
+
+
+
+
+
+
+
+
 > :wq -> para guardar y salir
 
 > sudo systemctl restart nagios.service -> Reiniciar el servicio
