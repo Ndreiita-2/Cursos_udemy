@@ -29,7 +29,7 @@ Los Host son los dispositivos que tienen IP y se conectan con Nagios para ser mo
 
 Las variables o macros ($) es lo que nos va a permitir dinámicamente invocar información. Podemos crear nosotros nuestras propias macros personalizadas (_).
 
-Los servicios son la representación de los recursos que queremos monitorizar
+Los servicios son la representación de los recursos que queremos monitorizar.
 
 # Rutas importantes
 
@@ -153,6 +153,16 @@ sudo vim NOMBREHOST
 
 ```
 
+Los servicios los definimos también aquí, esto se realiza después de definir los comandos que lo vemos en otro apartado :
+```
+define service {
+   use                     local-service
+   host_name               NOMBREHOST
+   service_description     Servicio de PING
+   check_command           check_ping!100.0,20%!500.0,60%
+}
+```
+
 Para crear el primer Host group:
 
 ```
@@ -165,8 +175,52 @@ define hostgroup {
         members         NOMBRESHOST
 }
 
+```
+
+## Archivo commands.cfg
+
+En la ruta /usr/local/nagios/etc/objects/commands.cfg podemos definir los comandos
+```
+define command {
+
+    command_name    check_ping
+    command_line    $USER1$/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$ -p 5
+}
+```
+
+Los Checks se encuentran en la siguiente ruta que contiene todos los archivos de plugins:
+```
+/usr/local/nagios/libexec
+```
+
+Un comando importante que debemos definir para que nos aparezca si un Host está activo o no, es el siguiente:
+```
+define command {
+
+    command_name    check-host-alive
+    command_line    $USER1$/check_ping -H $HOSTADDRESS$ -w 3000.0,80% -c 5000.0,100% -p 5
+}
 
 ```
+Para que funcione debemos hacer que se haga la comprobación a nivel de Host. Para ello entramos en el archivo donde definimos nuestros Host:
+```
+/usr/local/nagios/etc/objects/NOMBRECARPETAHOSTS
+```
+```
+define command {
+
+    command_name    check-host-alive
+    command_line    $USER1$/check_ping -H $HOSTADDRESS$ -w 3000.0,80% -c 5000.0,100% -p 5
+}
+
+```
+
+
+
+
+
+
+
 Queremos que lo que hay en la carpeta que hemos creado, sea procesado por Nagios:
 ```
 sudo vim /usr/local/nagios/etc/nagios.cfg
