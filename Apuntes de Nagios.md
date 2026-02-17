@@ -215,6 +215,45 @@ define command {
 
 ```
 
+## Archivo timeperiods.cfg
+Donde vamos a definir los periodos de tiempo, es decir, cuándo queremos que nos lleguen las alertas.
+
+```
+define timeperiod {
+
+    name                    24x7
+    timeperiod_name         24x7
+    alias                   24 Hours A Day, 7 Days A Week
+
+    sunday                  00:00-24:00
+    monday                  00:00-24:00
+    tuesday                 00:00-24:00
+    wednesday               00:00-24:00
+    thursday                00:00-24:00
+    friday                  00:00-24:00
+    saturday                00:00-24:00
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
