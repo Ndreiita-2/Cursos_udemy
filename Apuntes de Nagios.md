@@ -250,6 +250,8 @@ define timeperiod {
 }
 ```
 
+## Archivo contacts.cfg
+Se definen los contactos y los grupos de contactos
 
 
 
