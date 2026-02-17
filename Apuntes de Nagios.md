@@ -53,6 +53,21 @@ UDEMY SECCIÓN 3.11 PRÁCTICA
 
 # Archivos importantes
 
+> [!NOTE]
+> :wq -> para guardar y salir
+
+> [!NOTE]
+> Reiniciar el servicio
+> ```
+> sudo systemctl restart nagios.service
+> ```
+
+> [!NOTE]
+> SIEMPRE para ver los errores
+> ```
+> sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/bin/nagios.cfg
+> ```
+
 ## Archivo nagios.cfg
 
 Se van a guardar los logs
@@ -267,10 +282,6 @@ sudo vim /usr/local/nagios/etc/nagios.cfg
 ```
 cfg_dir=/usr/local/nagios/etc/objects/CARPETACREADAHOST/NOMBREHOST1.CFG
 ```
-Reiniciamos el sistema de Nagios
-```
-sudo systemctl restart nagios.service
-```
 
 
 
@@ -280,9 +291,6 @@ sudo systemctl restart nagios.service
 
 
 
-> :wq -> para guardar y salir
-
-> sudo systemctl restart nagios.service -> Reiniciar el servicio
 
 
 
