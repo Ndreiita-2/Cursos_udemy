@@ -31,6 +31,8 @@ Las variables o macros ($) es lo que nos va a permitir dinámicamente invocar in
 
 Los servicios son la representación de los recursos que queremos monitorizar.
 
+Las plantillas nos permiten definir una serie de parámetros que queremos que se nos apliquen a uno o más Hosts.
+
 # Rutas importantes
 
 - /usr/local/nagios/etc
@@ -251,8 +253,13 @@ define timeperiod {
 ```
 
 ## Archivo contacts.cfg
-Se definen los contactos y los grupos de contactos
+Se definen los contactos y los grupos de contactos.
 
+## Archivo
+Para definir plantillas. 
+```
+/usr/local/nagios/etc/objects/templates.cfg
+```
 
 
 
